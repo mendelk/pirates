@@ -76,6 +76,5 @@ PLATFORMS
 DEPENDENCIES
   data_mapper
   dm-sqlite-adapter
-  json
   sinatra
   slim
