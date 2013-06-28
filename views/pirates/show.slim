@@ -1,0 +1,28 @@
+h3 = @pirate.name
+
+ul
+  li
+    'Height:
+    = @pirate.height
+  li
+    'Weight:
+    = @pirate.weight
+
+h4 My ships:
+
+- unless @pirate.ships.empty?
+  ul
+    - @pirate.ships.each do |ship|
+      li
+        = ship.name
+        '  (Type:
+        = ship.type
+        '. Booty:
+        = ship.booty
+        |)
+- else
+  p No Ships :(
+
+form action="/#{model_slug "Pirate"}/#{@pirate.slug}" method="POST"
+  input type="hidden" name="_method" value="delete"
+  input.button.alert.small type="submit" value="Delete"

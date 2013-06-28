@@ -1,0 +1,54 @@
+h3 Create new Pirate:
+
+form action="/#{model_slug "Pirate"}" method="POST"
+  .row
+    .small-4.columns
+      .row
+        .small-3.columns
+          label.right.inline for="name" Name
+        .small-9.columns
+          input#name placeholder="Enter New Pirate's Name" name="pirate[name]" type="text"
+
+    .small-4.columns
+      .row
+        .small-3.columns
+          label.right.inline for="height" Height
+        .small-9.columns
+          input#height placeholder="Enter Height" name="pirate[height]" type="text"
+
+    .small-4.columns
+      .row
+        .small-3.columns
+          label.right.inline for="weight" Weight
+        .small-9.columns
+          input#weight placeholder="Enter Weight" name="pirate[weight]" type="text"
+
+
+  h3 Give her some ships!
+  .row.new_ship
+    .small-4.columns
+      .row
+        .small-3.columns
+          label.right.inline Name
+        .small-9.columns
+          input placeholder="Enter Ship's Name" name="pirate_ship[][name]" type="text"
+
+    .small-4.columns
+      .row
+        .small-3.columns
+          label.right.inline Type
+        .small-9.columns
+          input placeholder="Enter Ship Type" name="pirate_ship[][type]" type="text"
+
+    .small-4.columns
+      .row
+        .small-3.columns
+          label.right.inline Booty
+        .small-9.columns
+          input placeholder="Enter Ship Booty" name="pirate_ship[][booty]" type="text"
+
+  .row
+    .small-12.columns
+      button.add_ship.right.tiny.round type="button" Add Ship!
+    .small-12.columns
+      input.button type="submit"

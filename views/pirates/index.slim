@@ -1,0 +1,7 @@
+h1 List of Pirates
+
+ul
+
+  - @pirates.each do |pirate|
+    li
+      a href="/#{model_slug("Pirate")}/#{pirate.slug}" = pirate.name
